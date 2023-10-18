@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_nike"
+        android:label=""
+        android:roundIcon="@mipmap/ic_launcher_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.NoActionBar"
+        tools:targetApi="31">
+
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDSmkSye5jafrqHUz2327dB7_uDiSHlNgw" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:exported="true" />
+
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.SearchProduct"
+            android:exported="false" />
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.PumaProduct"
+            android:exported="false" />
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.NikeProduct"
+            android:exported="false" />
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.ContactActivity"
+            android:exported="false" />
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.ProductdetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.ListProductActivity"
+            android:exported="false" />
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.AdminActivity"
+            android:exported="false"/>
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.ChatActivity"
+            android:exported="false"/>
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.HomeActivity"
+            android:exported="true">
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

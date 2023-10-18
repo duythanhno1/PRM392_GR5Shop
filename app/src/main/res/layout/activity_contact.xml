@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="se1606_prm392_group5.example.se1606_prm392_group05.View.ContactActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="150dp"
+            android:text="Contact"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="80dp"
+            app:srcCompat="@drawable/retro_sneakers_and_shoes_store_logo_2"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="171dp"
+            tools:layout_editor_absoluteY="30dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone: 0856.020.525"
+        android:textColor="@color/black"
+        android:drawableStart="@drawable/icon_phone"
+        android:drawablePadding="15dp"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email: leanhtuyenvta@gmail.com"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:drawableStart="@drawable/icon_mail"
+        android:drawablePadding="15dp"
+        android:paddingLeft="30dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Address: Cantho, Vietnam"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:drawableStart="@drawable/icon_address"
+        android:drawablePadding="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

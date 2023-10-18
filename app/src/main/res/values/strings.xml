@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SE1603_PRM392_ShoeStoreApp_Group05</string>
+
+    <string name="ek_img_content">ExportKit Image</string>
+    <string name="sing_up_string">Sing up</string>
+    <string name="login_string">Login</string>
+    <string name="login_ek1_string">Login</string>
+    <string name="exit_string">Exit</string>
+
+</resources>

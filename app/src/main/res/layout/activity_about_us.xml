@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ilumia"
+    tools:context="se1606_prm392_group5.example.se1606_prm392_group05.View.AboutUsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Tên ứng dụng -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:text="About Us"
+            android:textColor="#000000"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="95dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/logo3" />
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/icon_puma" />
+
+        <TextView
+            android:layout_width="305dp"
+            android:layout_height="212dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="The homepage displays the featured products of the manufacturer, making it easy for users to access the products they are interested in and are more likely to purchase.
+Users can search for products using different criteria such as brand, color, and size.
+The app also provides shipping and payment related features. Users can choose the shipping and payment method that works for them.
+In addition, the About Us page also provides information about application developers, helping users better understand the quality of the company's products and services."
+            android:textAlignment="center"
+            android:textColor="#090000"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="129dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center_horizontal"
+
+            app:srcCompat="@drawable/icon_nike" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
