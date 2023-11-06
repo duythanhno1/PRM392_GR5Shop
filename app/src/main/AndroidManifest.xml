@@ -32,55 +32,58 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDSmkSye5jafrqHUz2327dB7_uDiSHlNgw" />
+            android:value="AIzaSyAoeuZGtdrFDFH9p9BeFnYhj9kQWyJYDYI" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:exported="true" />
 
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.SearchProduct"
+            android:name=".View.SearchProduct"
             android:exported="false" />
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.PumaProduct"
+            android:name=".View.PumaProduct"
             android:exported="false" />
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.NikeProduct"
+            android:name=".View.NikeProduct"
             android:exported="false" />
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.AboutUsActivity"
+            android:name=".View.AboutUsActivity"
             android:exported="false" />
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.ContactActivity"
+            android:name=".View.ContactActivity"
             android:exported="false" />
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.OrderActivity"
+            android:name=".View.OrderActivity"
             android:exported="false" />
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.CartActivity"
+            android:name=".View.CartActivity"
             android:exported="false" />
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.ProductdetailActivity"
+            android:name=".View.ProductdetailActivity"
             android:exported="false" />
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.ListProductActivity"
+            android:name=".View.ListProductActivity"
             android:exported="false" />
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.ForgotPasswordActivity"
+            android:name=".View.ForgotPasswordActivity"
             android:exported="false" />
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.RegisterActivity"
+            android:name=".View.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.LoginActivity"
+            android:name=".View.LoginActivity"
             android:exported="false" />
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.AdminActivity"
+            android:name=".View.AdminActivity"
             android:exported="false"/>
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.ChatActivity"
+            android:name=".View.ChatActivity"
             android:exported="false"/>
+        <activity android:name=".View.ResetPasswordActivity"
+            android:exported="true"
+           />
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.HomeActivity"
+            android:name=".View.HomeActivity"
             android:exported="true">
 
 
@@ -91,7 +94,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="se1606_prm392_group5.example.se1606_prm392_group05.View.MainActivity"
+            android:name=".View.MainActivity"
             android:exported="false" />
     </application>
 

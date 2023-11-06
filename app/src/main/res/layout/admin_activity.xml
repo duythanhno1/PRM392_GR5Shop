@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/anh"
-    tools:context="se1606_prm392_group5.example.se1606_prm392_group05.View.AdminActivity">
+    tools:context=".View.AdminActivity">
 
     <!-- Giao diện trang Admin -->
 

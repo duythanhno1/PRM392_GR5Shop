@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ilumia"
-    tools:context="se1606_prm392_group5.example.se1606_prm392_group05.View.AboutUsActivity">
+    tools:context=".View.AboutUsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

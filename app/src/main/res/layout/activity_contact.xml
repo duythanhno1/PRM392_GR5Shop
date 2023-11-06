@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:orientation="vertical"
-    tools:context="se1606_prm392_group5.example.se1606_prm392_group05.View.ContactActivity">
+    tools:context=".View.ContactActivity">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,37 +36,36 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Phone: 0856.020.525"
-        android:textColor="@color/black"
+        android:layout_marginTop="50dp"
         android:drawableStart="@drawable/icon_phone"
         android:drawablePadding="15dp"
-        android:textSize="20dp"
-        android:layout_marginTop="50dp"
-        android:paddingLeft="30dp"/>
+        android:paddingLeft="30dp"
+        android:text="Phone: 0123456789"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email: leanhtuyenvta@gmail.com"
-        android:textColor="@color/black"
-        android:textSize="20dp"
+        android:layout_marginTop="10dp"
         android:drawableStart="@drawable/icon_mail"
         android:drawablePadding="15dp"
         android:paddingLeft="30dp"
-        android:layout_marginTop="10dp"/>
+        android:text="Email: g5shop@gmail.com"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Address: Cantho, Vietnam"
-        android:textColor="@color/black"
-        android:textSize="20dp"
+        android:layout_marginTop="10dp"
         android:drawableStart="@drawable/icon_address"
         android:drawablePadding="10dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        android:layout_marginTop="10dp"
-        />
+        android:text="Address: 600 nguyen Van Cu, An Khanh, Ninh Kieu, Cantho"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
 
     <fragment
         android:id="@+id/mapFragment"
