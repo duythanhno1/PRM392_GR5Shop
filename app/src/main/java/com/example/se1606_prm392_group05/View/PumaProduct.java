@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.se1606_prm392_group05.Adapter.NikeProductAdapter;
+import com.example.se1606_prm392_group05.Adapter.AnanasProductAdapter;
 import com.example.se1606_prm392_group05.Data.ProductsData;
 import com.example.se1606_prm392_group05.Model.Product;
 import com.example.se1606_prm392_group05.R;
@@ -21,7 +21,7 @@ import java.util.List;
 
 public class PumaProduct extends AppCompatActivity {
     private RecyclerView recyclerViewPuma;
-    private NikeProductAdapter pumaProductAdapter;
+    private AnanasProductAdapter pumaProductAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class PumaProduct extends AppCompatActivity {
         List<Product> pumaProducts = getNikeProducts();
 
         // Khởi tạo nikeProductAdapter với danh sách sản phẩm của thương hiệu Nike
-        pumaProductAdapter = new NikeProductAdapter(this,pumaProducts);
+        pumaProductAdapter = new AnanasProductAdapter(this,pumaProducts);
 
         // Thiết lập layout manager cho RecyclerView (GridLayoutManager với spanCount là 2)
         recyclerViewPuma.setLayoutManager(new GridLayoutManager(this, 2));

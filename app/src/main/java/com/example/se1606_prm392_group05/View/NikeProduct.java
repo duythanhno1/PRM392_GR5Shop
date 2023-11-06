@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.se1606_prm392_group05.Adapter.NikeProductAdapter;
+import com.example.se1606_prm392_group05.Adapter.AnanasProductAdapter;
 import com.example.se1606_prm392_group05.Data.ProductsData;
 import com.example.se1606_prm392_group05.Model.Product;
 import com.example.se1606_prm392_group05.R;
@@ -21,7 +21,7 @@ import java.util.List;
 
 public class NikeProduct extends AppCompatActivity {
     private RecyclerView recyclerViewNike;
-    private NikeProductAdapter nikeProductAdapter;
+    private AnanasProductAdapter ananasProductAdapter;
 
 
     @Override
@@ -35,13 +35,13 @@ public class NikeProduct extends AppCompatActivity {
         List<Product> nikeProducts = getNikeProducts();
 
         // Khởi tạo nikeProductAdapter với danh sách sản phẩm của thương hiệu Nike
-        nikeProductAdapter = new NikeProductAdapter(this,nikeProducts);
+        ananasProductAdapter = new AnanasProductAdapter(this,nikeProducts);
 
         // Thiết lập layout manager cho RecyclerView (GridLayoutManager với spanCount là 2)
         recyclerViewNike.setLayoutManager(new GridLayoutManager(this, 2));
 
         // Thiết lập adapter cho RecyclerView với danh sách sản phẩm của thương hiệu Nike
-        recyclerViewNike.setAdapter(nikeProductAdapter);
+        recyclerViewNike.setAdapter(ananasProductAdapter);
 
         ImageView SearchImageview = findViewById(R.id.SearchimageView);
         SearchImageview.setOnClickListener(new View.OnClickListener() {
@@ -87,7 +87,7 @@ public class NikeProduct extends AppCompatActivity {
                     sortImageView.setRotation(0); // Đặt lại hướng ban đầu của biểu tượng khi sắp xếp tăng dần
                 }
 
-                nikeProductAdapter.notifyDataSetChanged();
+                ananasProductAdapter.notifyDataSetChanged();
             }
         });
         ImageView sortImageView2 = findViewById(R.id.sortImageView2);
@@ -116,7 +116,7 @@ public class NikeProduct extends AppCompatActivity {
                     sortImageView2.setRotation(0); // Đặt lại hướng ban đầu của biểu tượng khi sắp xếp tăng dần
                 }
 
-                nikeProductAdapter.notifyDataSetChanged();
+                ananasProductAdapter.notifyDataSetChanged();
             }
         });
     }

@@ -18,11 +18,11 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class PumaProductAdapter extends RecyclerView.Adapter<PumaProductAdapter.ViewHolder> {
+public class BitisProductAdapter extends RecyclerView.Adapter<BitisProductAdapter.ViewHolder> {
     private List<Product> productList;
     private Context context;
 
-    public PumaProductAdapter(Context context, List<Product> productList) {
+    public BitisProductAdapter(Context context, List<Product> productList) {
         this.context = context;
         this.productList = productList;
     }

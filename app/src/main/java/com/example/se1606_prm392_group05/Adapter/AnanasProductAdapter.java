@@ -18,10 +18,10 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class NikeProductAdapter extends RecyclerView.Adapter<NikeProductAdapter.ViewHolder> {
+public class AnanasProductAdapter extends RecyclerView.Adapter<AnanasProductAdapter.ViewHolder> {
     private List<Product> productList;
     private Context context;
-    public NikeProductAdapter(Context context,List<Product> productList) {
+    public AnanasProductAdapter(Context context, List<Product> productList) {
         this.context = context;
         this.productList = productList;
     }
