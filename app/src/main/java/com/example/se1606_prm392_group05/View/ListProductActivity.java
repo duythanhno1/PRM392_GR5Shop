@@ -65,7 +65,7 @@ public class ListProductActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (ascendingOrder) {
-                    Collections.sort(productList, new Comparator<Product>() { //Sử dụng Collections.sort() để sắp xếp lại danh sách theo tên hoặc giá
+                    Collections.sort(productList, new Comparator<Product>() { //Sử dụng Collections.sort() để sắp xếp lại danh sách theo tên
                         @Override
                         public int compare(Product p1, Product p2) {
                             return p1.getProductName().compareToIgnoreCase(p2.getProductName());

@@ -58,8 +58,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductViewHol
         private TextView textViewName;
         private TextView textViewPrice;
 
-
-
+        //Duoc su dung de khoi tao 1 ViewHolder cho mot muc trong danh sach RecyclerView
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
             imageViewProduct = itemView.findViewById(R.id.imageview_product);
@@ -70,11 +69,13 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductViewHol
             itemView.setOnClickListener(this);
         }
 
+        //phuong thuc bind nay đuoc su dung de gan du lieu tu đoi tuong Product vao các phan tu giao dien ngưoi dung bên trong ViewHolder.
         public void bind(Product product) {
             Picasso.get().load(product.getProductImage()).into(imageViewProduct);
             textViewName.setText(product.getProductName());
             textViewPrice.setText(String.valueOf(product.getProductPrice()));
         }
+
         @Override
         public void onClick(View v) {
             int position = getAdapterPosition();
