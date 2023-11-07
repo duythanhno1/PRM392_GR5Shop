@@ -15,7 +15,7 @@ import com.example.se1606_prm392_group05.Interface.LoginView;
 import com.example.se1606_prm392_group05.R;
 import com.example.se1606_prm392_group05.Data.RegisterHelper;
 
-public class LoginActivity extends AppCompatActivity implements LoginView {
+public class LoginActivity extends AppCompatActivity implements LoginView { // Implement LoginView để hiển thị các thông báo lỗi/thành công từ UserController.
 
     private EditText usernameEditText;
     private EditText passwordEditText;
@@ -25,12 +25,12 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     private UserController userController;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { //tạo nút click cho đăng nhập
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         RegisterHelper registerHelper = new RegisterHelper(this); // Pass context to RegisterHelper
-        userController = new UserController(registerHelper);
+        userController = new UserController(registerHelper); // gọi phương thức đăng nhập cho UserController
 
         Button signInButton = findViewById(R.id.btn_SignUp);
         signInButton.setOnClickListener(new View.OnClickListener() {
@@ -60,14 +60,14 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
                         showLoginSuccess();
                         boolean isAdmin = username.equals("admin") && password.equals("123");
                         if (isAdmin) {
-                            Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, AdminActivity.class); // mở AdminActivity
                             startActivity(intent);
                         } else {
-                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class); //mở HomeActivity
                                 intent.putExtra("USERNAME", username);
                                 startActivity(intent);
                         }
-                        finish();
+                        finish(); // Đóng LoginActivity
                     } else {
                         showInvalidCredentials();
                     }
@@ -78,7 +78,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         forgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ForgotPasswordActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ForgotPasswordActivity.class); // Xử lý sự kiện cho nút "Quên mật khẩu" và "Đăng ký" để mở các Activity tương ứng.
                 startActivity(intent);
             }
         });

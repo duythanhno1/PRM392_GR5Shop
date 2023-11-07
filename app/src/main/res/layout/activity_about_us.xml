@@ -40,8 +40,8 @@
             app:srcCompat="@drawable/icon_puma" />
 
         <TextView
-            android:layout_width="305dp"
-            android:layout_height="261dp"
+            android:layout_width="334dp"
+            android:layout_height="226dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
             android:text="The homepage displays the featured products of the manufacturer, making it easy for users to access the products they are interested in and are more likely to purchase.
