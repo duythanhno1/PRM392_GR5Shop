@@ -19,7 +19,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class NikeProduct extends AppCompatActivity {
+public class AnanasProduct extends AppCompatActivity {
     private RecyclerView recyclerViewNike;
     private AnanasProductAdapter ananasProductAdapter;
 
@@ -27,7 +27,7 @@ public class NikeProduct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nike_product);
+        setContentView(R.layout.activity_ananas_product);
 
         recyclerViewNike = findViewById(R.id.recyclerviewNike);
 
@@ -47,7 +47,7 @@ public class NikeProduct extends AppCompatActivity {
         SearchImageview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NikeProduct.this, SearchProduct.class);
+                Intent intent = new Intent(AnanasProduct.this, SearchProduct.class);
                 startActivity(intent);
             }
         });
@@ -56,7 +56,7 @@ public class NikeProduct extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NikeProduct.this, HomeActivity.class);
+                Intent intent = new Intent(AnanasProduct.this, HomeActivity.class);
                 setResult(RESULT_OK, intent);
                 finish();
             }

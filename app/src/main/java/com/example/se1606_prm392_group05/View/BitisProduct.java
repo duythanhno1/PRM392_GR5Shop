@@ -19,14 +19,14 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class PumaProduct extends AppCompatActivity {
+public class BitisProduct extends AppCompatActivity {
     private RecyclerView recyclerViewPuma;
     private AnanasProductAdapter pumaProductAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_puma_product);
+        setContentView(R.layout.activity_bitis_product);
 
         recyclerViewPuma = findViewById(R.id.recyclerviewPuma);
 
@@ -46,7 +46,7 @@ public class PumaProduct extends AppCompatActivity {
         SearchImageview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PumaProduct.this, SearchProduct.class);
+                Intent intent = new Intent(BitisProduct.this, SearchProduct.class);
                 startActivity(intent);
             }
         });
@@ -55,7 +55,7 @@ public class PumaProduct extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PumaProduct.this, HomeActivity.class);
+                Intent intent = new Intent(BitisProduct.this, HomeActivity.class);
                 setResult(RESULT_OK, intent);
                 finish();
             }

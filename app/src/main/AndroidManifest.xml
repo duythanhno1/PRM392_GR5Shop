@@ -41,10 +41,10 @@
             android:name=".View.SearchProduct"
             android:exported="false" />
         <activity
-            android:name=".View.PumaProduct"
+            android:name=".View.BitisProduct"
             android:exported="false" />
         <activity
-            android:name=".View.NikeProduct"
+            android:name=".View.AnanasProduct"
             android:exported="false" />
         <activity
             android:name=".View.AboutUsActivity"

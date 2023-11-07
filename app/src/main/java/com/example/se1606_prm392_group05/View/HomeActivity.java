@@ -230,14 +230,14 @@ public class HomeActivity extends AppCompatActivity {
         NikeLinearlayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, NikeProduct.class);
+                Intent intent = new Intent(HomeActivity.this, AnanasProduct.class);
                 startActivity(intent);
             }
         });
         PumaLinearlayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, PumaProduct.class);
+                Intent intent = new Intent(HomeActivity.this, BitisProduct.class);
                 startActivity(intent);
             }
         });

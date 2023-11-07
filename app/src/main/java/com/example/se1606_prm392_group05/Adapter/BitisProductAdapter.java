@@ -30,7 +30,7 @@ public class BitisProductAdapter extends RecyclerView.Adapter<BitisProductAdapte
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_puma_product, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_bitis_product, parent, false);
         return new ViewHolder(view);
     }
 
