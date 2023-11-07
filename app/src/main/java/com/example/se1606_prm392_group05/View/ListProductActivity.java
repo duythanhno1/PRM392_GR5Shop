@@ -36,7 +36,7 @@ public class ListProductActivity extends AppCompatActivity {
         SearchImageview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ListProductActivity.this, SearchProduct.class);
+                Intent intent = new Intent(ListProductActivity.this, SearchProduct.class); // Thiết lập sự kiện click cho button Back để quay lại HomeActivity
                 startActivity(intent);
             }
         });
@@ -45,7 +45,7 @@ public class ListProductActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ListProductActivity.this, HomeActivity.class);
+                Intent intent = new Intent(ListProductActivity.this, HomeActivity.class); // Thiết lập sự kiện click cho button Search để mở SearchProductActivity
                 setResult(RESULT_OK, intent);
                 finish();
             }
@@ -53,10 +53,10 @@ public class ListProductActivity extends AppCompatActivity {
     }
 
     private void setupRecyclerView() {
-        RecyclerView recyclerView = findViewById(R.id.recyclerviewProduct);
+        RecyclerView recyclerView = findViewById(R.id.recyclerviewProduct); // Khởi tạo adapter và truyền vào danh sách sản phẩm
         ListProductAdapter adapter = new ListProductAdapter(this,productList);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2)); // Khởi tạo LayoutManager cho RecyclerView
+        recyclerView.setAdapter(adapter); // Set adapter và layout manager cho RecyclerView
 
         ImageView sortImageView = findViewById(R.id.sortImageView);
         sortImageView.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +65,7 @@ public class ListProductActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (ascendingOrder) {
-                    Collections.sort(productList, new Comparator<Product>() {
+                    Collections.sort(productList, new Comparator<Product>() { //Sử dụng Collections.sort() để sắp xếp lại danh sách theo tên hoặc giá
                         @Override
                         public int compare(Product p1, Product p2) {
                             return p1.getProductName().compareToIgnoreCase(p2.getProductName());
@@ -83,8 +83,7 @@ public class ListProductActivity extends AppCompatActivity {
                     ascendingOrder = true;
                     sortImageView.setRotation(0); // Đặt lại hướng ban đầu của biểu tượng khi sắp xếp tăng dần
                 }
-
-                adapter.notifyDataSetChanged();
+                adapter.notifyDataSetChanged(); //Gọi notifyDataSetChanged() để update lại RecyclerView
             }
         });
 
@@ -113,7 +112,6 @@ public class ListProductActivity extends AppCompatActivity {
                     ascendingOrder = true;
                     sortImageView2.setRotation(0); // Đặt lại hướng ban đầu của biểu tượng khi sắp xếp tăng dần
                 }
-
                 adapter.notifyDataSetChanged();
             }
         });
