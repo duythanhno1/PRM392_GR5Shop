@@ -25,7 +25,7 @@ public class AnanasProductAdapter extends RecyclerView.Adapter<AnanasProductAdap
         this.context = context;
         this.productList = productList;
     }
-
+    // Phương thức onCreateViewHolder() tạo ViewHolder mới cho từng item trong RecyclerView
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -36,12 +36,12 @@ public class AnanasProductAdapter extends RecyclerView.Adapter<AnanasProductAdap
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Product product = productList.get(position);
-
+// Gán tên sản phẩm, giá và hình ảnh từ đối tượng Product vào các View trong ViewHolder
         holder.productName.setText(product.getProductName());
         holder.productPrice.setText(String.format("$%.2f", product.getProductPrice()));
         Picasso.get().load(product.getProductImage()).into(holder.productImage);
     }
-
+    // Phương thức getItemCount() trả về số lượng item trong RecyclerView
     @Override
     public int getItemCount() {
         return productList.size();
@@ -57,21 +57,24 @@ public class AnanasProductAdapter extends RecyclerView.Adapter<AnanasProductAdap
             productImage = itemView.findViewById(R.id.imageview_brandproduct);
             productName = itemView.findViewById(R.id.textview_brandname);
             productPrice = itemView.findViewById(R.id.textview_brandprice);
-
+// Đăng ký sự kiện nhấn vào item
             itemView.setOnClickListener(this);
         }
-
+        // Phương thức bind(Product product) để gán dữ liệu từ đối tượng Product vào các View
         public void bind(Product product) {
             // Gán dữ liệu từ đối tượng Product vào các view tương ứng
             Picasso.get().load(product.getProductImage()).into(productImage);
             productName.setText(product.getProductName());
             productPrice.setText(String.valueOf(product.getProductPrice()));
         }
+        // Xử lý sự kiện khi item trong RecyclerView được nhấn
         @Override
         public void onClick(View v) {
             int position = getAdapterPosition();
             if (position != RecyclerView.NO_POSITION) {
+                // Lấy đối tượng Product tại vị trí được nhấn
                 Product product = productList.get(position);
+                // Tạo Intent để chuyển đến Activity ProductdetailActivity và gửi dữ liệu sản phẩm
                 Intent intent = new Intent(context, ProductdetailActivity.class);
                 intent.putExtra("productID", product.getProductID());
                 intent.putExtra("productImage", product.getProductImage());
