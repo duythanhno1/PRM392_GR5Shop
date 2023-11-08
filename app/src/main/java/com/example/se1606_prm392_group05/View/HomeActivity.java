@@ -39,7 +39,6 @@ public class HomeActivity extends AppCompatActivity {
     ViewFlipper viewFlipper;
     RecyclerView recyclerView;
     NavigationView navigationView;
-
     LinearLayout linearLayout1;
     LinearLayout linearLayout2;
     DrawerLayout drawerLayout;
