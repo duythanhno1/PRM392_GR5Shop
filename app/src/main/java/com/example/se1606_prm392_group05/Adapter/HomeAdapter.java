@@ -81,6 +81,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductViewHol
             int position = getAdapterPosition();
             if (position != RecyclerView.NO_POSITION) {
                 Product product = productList.get(position);
+                // Tạo một Intent để chuyển từ màn hình hiện tại (context) sang ProductdetailActivity.
                 Intent intent = new Intent(context, ProductdetailActivity.class);
                 intent.putExtra("productID", product.getProductID());
                 intent.putExtra("productImage", product.getProductImage());
@@ -90,6 +91,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductViewHol
                 intent.putExtra("productDescribe", product.getProductDescribe());
                 intent.putExtra("productColor", product.getProductColor());
                 intent.putExtra("productSize", product.getProductSize());
+                // Khởi động ProductdetailActivity bằng cách sử dụng Intent này.
                 context.startActivity(intent);
             }
         }

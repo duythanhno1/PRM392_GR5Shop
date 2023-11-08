@@ -98,14 +98,18 @@ public class HomeActivity extends AppCompatActivity {
 
 
         ProductsDBHelper dbHelper = new ProductsDBHelper(this);
+        // Lấy tất cả sản phẩm từ cơ sở dữ liệu
         newProduct = dbHelper.getAllProducts();
 
         List<Product> sampleProducts = ProductsData.getSampleProducts();
+        // Thêm tất cả sản phẩm mẫu vào danh sách sản phẩm (newProduct)
         newProduct.addAll(sampleProducts);
 
         HomeAdapter adapter = new HomeAdapter(this, newProduct);
+        // Đặt Adapter cho RecyclerView để hiển thị danh sách sản phẩm
         recyclerView.setAdapter(adapter);
 
+        // Tạo một GridLayoutManager với 2 cột cho RecyclerView
         GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
 
@@ -138,17 +142,23 @@ public class HomeActivity extends AppCompatActivity {
         for (int i=0; i<Advertisement.size(); i++){
             ImageView imageView = new ImageView(getApplicationContext());
             Picasso.get().load(Advertisement.get(i)).into(imageView);
+            // Đặt chế độ tỷ lệ của ImageView là FIT_XY để làm cho hình ảnh nằm vừa trong ImageView
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
             viewFlipper.addView(imageView);
         }
         viewFlipper.setFlipInterval(5000);
         viewFlipper.setAutoStart(true);
+        // Animation sidebar_in: hiệu ứng khi mục mới vào
         Animation animation_sidebar_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sidebar_in_right);
+        // Animation sidebar_out: hiệu ứng khi mục hiện tại ra khỏi
         Animation animation_sidebar_out = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.sidebar_out_right);
+
+        // Đặt hoạt ảnh (animation) cho khi một phần tử mới hiển thị trong ViewFlipper
         viewFlipper.setInAnimation(animation_sidebar_in);
         viewFlipper.setOutAnimation(animation_sidebar_out);
     }
     private void Assignviews(){
+        // Lấy tham chiếu đến thanh công cụ (toolbar) từ tài nguyên với ID 'toolbarHome'
         toolbar = findViewById(R.id.toolbarHome);
         viewFlipper = findViewById(R.id.viewFlipperHome);
         navigationView = findViewById(R.id.navigationViewHome);
@@ -161,6 +171,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
         TextView HometextView = findViewById(R.id.nav_home);
+        // Lấy tham chiếu đến TextView 'ProductstextView' từ tài nguyên với ID 'nav_products'
         TextView ProductstextView = findViewById(R.id.nav_products);
         TextView CarttextView = findViewById(R.id.nav_cart);
         TextView ChattextView = findViewById(R.id.nav_chat);
@@ -242,12 +253,14 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        // Tạo một đối tượng Intent để chuyển từ HomeActivity sang CartActivity
         Intent intent = new Intent(HomeActivity.this, CartActivity.class);
         Intent intent1 = getIntent();
         CartImageview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 List<Cart> cartList = (List<Cart>) intent1.getSerializableExtra("cartItems");
+                // Đặt cartList như một extra Serializable trong intent, để có thể được truyền đến CartActivity.
                 intent.putExtra("cartItem", (Serializable) cartList);
                 startActivity(intent);
             }
